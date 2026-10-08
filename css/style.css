@@ -1,6 +1,8 @@
 /* Saboss Barber Shop – dunkles Holz, Messing, Piraten-Steuerrad */
 @font-face { font-family: "Pirata One"; src: url("../assets/fonts/pirata-one.ttf") format("truetype"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "IM Fell English SC"; src: url("../assets/fonts/im-fell-english-sc.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("../assets/fonts/playfair-display-900.ttf") format("truetype"); font-weight: 900; font-display: swap; }
+@font-face { font-family: "Bebas Neue"; src: url("../assets/fonts/bebas-neue.ttf") format("truetype"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "Crimson Pro"; src: url("../assets/fonts/crimson-pro-400.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Crimson Pro"; src: url("../assets/fonts/crimson-pro-600.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
 @font-face { font-family: "Crimson Pro"; src: url("../assets/fonts/crimson-pro-italic.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
@@ -160,13 +162,35 @@ p { margin: 0 0 1rem; color: var(--muted); }
 .round { width: 52px; height: 52px; border-radius: 50%; border: 2px solid var(--brass); background: rgba(0, 0, 0, .4); color: var(--amber-hi); font-size: 1.3rem; cursor: pointer; transition: background .3s, color .3s, transform .2s; }
 .round:hover { background: var(--amber); color: #1a0e06; transform: scale(1.06); }
 
-/* Team – Porträtrahmen mit Messingschild */
-.team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; }
-.member { text-align: center; }
-.member__photo { padding: 14px; background: linear-gradient(135deg, #7a4f28, #3a2312 38%, #5e3b1c 62%, #2b1a0e); box-shadow: 0 18px 22px rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(255, 220, 160, .28), inset 0 0 0 3px rgba(0, 0, 0, .4); }
-.member__photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; box-shadow: 0 0 0 4px #e6d6b0, 0 0 0 5px rgba(0, 0, 0, .6); }
-.member h3 { display: inline-block; margin: 1.3rem 0 0; padding: .35rem 1.4rem; color: #2a1608; font-size: 1.7rem; border: 2px solid #5a3a12; border-radius: 3px; background: linear-gradient(#f4cc7c, #c8923a); box-shadow: 0 4px 8px rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .5); }
-.member__role { margin: .7rem 0 0; color: var(--amber); font: 400 1.05rem var(--label); letter-spacing: .16em; text-transform: uppercase; }
+/* Team – Fahndungsplakate */
+.team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.4rem; align-items: start; }
+.wanted { container-type: inline-size; position: relative; padding: 1.5rem 1.4rem 1.3rem; color: #4a3a36; text-align: center; rotate: var(--r, 0deg); transform-origin: 50% 0; transition: rotate .6s var(--ease), translate .6s var(--ease);
+  background: linear-gradient(rgba(190, 170, 140, .28), rgba(160, 130, 95, .3)), var(--paper-tex) #dccfb2;
+  box-shadow: 0 0 0 5px #4a3a36, 0 0 0 7px #d9cdb4, 0 0 0 9px #4a3a36, 0 22px 26px rgba(0, 0, 0, .6), inset 0 0 60px rgba(100, 70, 40, .45); }
+.wanted:nth-child(1) { --r: -1.4deg; } .wanted:nth-child(2) { --r: .8deg; } .wanted:nth-child(3) { --r: -.7deg; }
+.wanted:hover { rotate: 0deg; translate: 0 -6px; }
+.wanted::before { content: ""; position: absolute; left: 50%; top: -22px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff0b8, #c9964a 50%, #5e3d10); box-shadow: 0 3px 3px rgba(0, 0, 0, .6); }
+.wanted__title { font: 900 21cqw / .9 "Playfair Display", Georgia, serif; letter-spacing: -.01em; color: #4a3a36; text-shadow: none; margin: 0 0 .7rem; }
+.wanted__photo { border: 3px solid #4a3a36; background: #1b110a; overflow: hidden; }
+.wanted__photo img { width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; filter: sepia(.45) contrast(1.05); transition: filter .5s, transform .8s var(--ease); }
+.wanted:hover .wanted__photo img { filter: none; transform: scale(1.04); }
+.wanted__dead { margin: .9rem 0 .1rem; font: 400 6.2cqw var(--label); letter-spacing: .2em; color: #4a3a36; }
+.wanted__name { margin: 0; font: 400 15cqw / 1 "Bebas Neue", Impact, sans-serif; letter-spacing: .02em; color: #4a3a36; text-transform: uppercase; }
+.wanted__bounty { display: flex; justify-content: center; align-items: center; gap: .5rem; margin: .3rem 0 .6rem; font: 400 10.5cqw / 1 "Bebas Neue", Impact, sans-serif; letter-spacing: .14em; color: #4a3a36; }
+.wanted__icon { width: 1.15em; height: 1.15em; fill: none; stroke: currentColor; stroke-width: 3.6; stroke-linecap: round; }
+.wanted__foot { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 1rem; text-align: left; }
+.wanted__small { margin: 0; font: 600 max(.62rem, 3.3cqw) / 1.3 var(--body); letter-spacing: .04em; text-transform: uppercase; color: #4a3a36; }
+.wanted__rank { margin: 0; font: 400 9cqw / .9 "Bebas Neue", Impact, sans-serif; letter-spacing: .04em; color: #4a3a36; }
+
+/* Preise – wie die Karte an der Bar */
+.menu { padding: clamp(1.6rem, 4vw, 3rem); border: 3px solid #0c0603; border-radius: 3px;
+  background: linear-gradient(rgba(18, 9, 4, .84), rgba(12, 6, 3, .9)), var(--planks) 0 0 / 700px auto;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, .55), inset 0 0 0 2px rgba(224, 183, 101, .4), inset 0 0 0 8px rgba(0, 0, 0, .4), inset 0 0 0 9px rgba(224, 183, 101, .22); }
+.prices { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: clamp(2rem, 5vw, 4rem); }
+.prices li { display: grid; grid-template-columns: auto 1fr auto; column-gap: .7rem; align-items: baseline; padding: .75rem 0; break-inside: avoid; }
+.prices__name { font: 400 1.5rem / 1.1 var(--display); color: var(--cream); }
+.prices__dots { border-bottom: 3px dotted var(--brass); opacity: .7; transform: translateY(-5px); min-width: 1rem; }
+.prices__price { color: var(--amber-hi); font: 400 1.6rem var(--display); white-space: nowrap; }
 
 /* Termin + Kontakt */
 .booking { position: relative; min-height: 420px; margin-bottom: 3rem; border: 10px solid #3a2312; outline: 2px solid #0c0603; box-shadow: 0 20px 30px rgba(0, 0, 0, .55), inset 0 0 0 2px rgba(224, 183, 101, .3);
@@ -232,7 +256,8 @@ address { font-style: normal; color: var(--text); margin-bottom: .6rem; font-siz
   .hero::before { background: linear-gradient(180deg, rgba(8, 4, 2, .7) 0%, rgba(8, 4, 2, .15) 55%, rgba(8, 4, 2, .5) 100%); }
   .hero__sub { font-size: 1.3rem; }
   .scroll-hint { display: none; }
-  .team { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; }
+  .team { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; gap: 3rem; }
+  .prices { columns: 1; }
   .contact { grid-template-columns: 1fr; }
   body { padding-bottom: 64px; }
   .sticky-book { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 95; height: 64px; align-items: center; justify-content: center; background: linear-gradient(#f4cc7c, #c8923a); color: #1a0e06; border-top: 3px solid #5a3a12; font: 400 1.15rem var(--label); letter-spacing: .2em; text-transform: uppercase; }

@@ -186,11 +186,11 @@ p { margin: 0 0 1rem; color: var(--muted); }
 .menu { padding: clamp(1.6rem, 4vw, 3rem); border: 3px solid #0c0603; border-radius: 3px;
   background: linear-gradient(rgba(18, 9, 4, .84), rgba(12, 6, 3, .9)), var(--planks) 0 0 / 700px auto;
   box-shadow: 0 20px 30px rgba(0, 0, 0, .55), inset 0 0 0 2px rgba(224, 183, 101, .4), inset 0 0 0 8px rgba(0, 0, 0, .4), inset 0 0 0 9px rgba(224, 183, 101, .22); }
-.prices { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: clamp(2rem, 5vw, 4rem); }
-.prices li { display: grid; grid-template-columns: auto 1fr auto; column-gap: .7rem; align-items: baseline; padding: .75rem 0; break-inside: avoid; }
-.prices__name { font: 400 1.5rem / 1.1 var(--display); color: var(--cream); }
+.prices { list-style: none; margin: 0 auto; padding: 0; max-width: 820px; }
+.prices li { display: grid; grid-template-columns: auto 1fr auto; column-gap: .8rem; align-items: baseline; padding: .85rem 0; }
+.prices__name { font: 400 clamp(1.6rem, 3.6vw, 2.1rem) / 1.1 var(--display); color: var(--cream); }
 .prices__dots { border-bottom: 3px dotted var(--brass); opacity: .7; transform: translateY(-5px); min-width: 1rem; }
-.prices__price { color: var(--amber-hi); font: 400 1.6rem var(--display); white-space: nowrap; }
+.prices__price { color: var(--amber-hi); font: 400 clamp(1.8rem, 4vw, 2.4rem) var(--display); white-space: nowrap; }
 
 /* Termin + Kontakt */
 .booking { position: relative; min-height: 420px; margin-bottom: 3rem; border: 10px solid #3a2312; outline: 2px solid #0c0603; box-shadow: 0 20px 30px rgba(0, 0, 0, .55), inset 0 0 0 2px rgba(224, 183, 101, .3);
@@ -257,7 +257,6 @@ address { font-style: normal; color: var(--text); margin-bottom: .6rem; font-siz
   .hero__sub { font-size: 1.3rem; }
   .scroll-hint { display: none; }
   .team { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; gap: 3rem; }
-  .prices { columns: 1; }
   .contact { grid-template-columns: 1fr; }
   body { padding-bottom: 64px; }
   .sticky-book { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 95; height: 64px; align-items: center; justify-content: center; background: linear-gradient(#f4cc7c, #c8923a); color: #1a0e06; border-top: 3px solid #5a3a12; font: 400 1.15rem var(--label); letter-spacing: .2em; text-transform: uppercase; }

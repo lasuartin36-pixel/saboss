@@ -105,7 +105,7 @@
     });
   }
 
-  /* Einwilligung (DSGVO): Karte + Buchungssystem erst nach Zustimmung/Klick */
+  /* Einwilligung (DSGVO): Karte erst nach Zustimmung/Klick */
   const banner = $('#consent');
   const KEY = 'saboss-consent';
   const embed = (box, src, title, extra = {}) => {
@@ -117,19 +117,7 @@
     box.replaceChildren(f);
   };
   const loadMap = () => { const m = $('#map'); embed(m, m && m.dataset.src, 'Karte: Standort Saboss Barber Shop'); };
-  const loadBooking = () => {
-    const b = $('#booking');
-    if (!b) return;
-    if (!b.dataset.src) {
-      const hint = $('.booking__hint', b);
-      if (hint) hint.textContent = 'Die Online-Buchung wird gerade eingerichtet. Bis dahin erreichst du uns telefonisch oder per WhatsApp.';
-      const btn = $('#load-booking');
-      if (btn) btn.hidden = true;
-      return;
-    }
-    embed(b, b.dataset.src, 'Online-Terminbuchung Saboss Barber Shop');
-  };
-  const apply = (choice) => { if (choice === 'all') { loadMap(); loadBooking(); } };
+  const apply = (choice) => { if (choice === 'all') loadMap(); };
   const choose = (choice) => { store.set(KEY, choice); banner.hidden = true; apply(choice); };
   const saved = store.get(KEY);
   if (saved) apply(saved); else banner.hidden = false;
@@ -137,6 +125,4 @@
   $('#cookie-settings').addEventListener('click', () => { banner.hidden = false; $('button', banner).focus(); });
   const mapBtn = $('#load-map');
   if (mapBtn) mapBtn.addEventListener('click', loadMap);
-  const bookBtn = $('#load-booking');
-  if (bookBtn) bookBtn.addEventListener('click', loadBooking);
 })();

@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Barbershop [STADT] – Saboss Barber Shop | Haarschnitt, Bart &amp; Nassrasur</title>
   <meta name="description" content="Saboss Barber Shop – dein Barbershop in [STADT]. Fade, Skin Fade, Bartpflege und traditionelle Nassrasur mit heißem Handtuch. Jetzt Termin buchen.">
-  <meta name="theme-color" content="#0B0B0C">
+  <meta name="theme-color" content="#160C06">
   <link rel="canonical" href="https://[DOMAIN]/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Saboss Barber Shop – Barbershop [STADT]">
   <meta property="og:description" content="Präzision. Stil. Deine Zeit. Haarschnitt, Bartpflege und Nassrasur in [STADT].">
   <meta property="og:locale" content="de_DE">
+  <meta property="og:image" content="https://[DOMAIN]/assets/img/logo.png">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap">
+  <link rel="preload" href="assets/fonts/pirata-one.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Lokale SEO: Platzhalter in [ECKIGEN KLAMMERN] durch echte Daten ersetzen -->
@@ -26,7 +25,7 @@
     "description": "Barbershop in [STADT]: Haarschnitt, Fade, Bartpflege und traditionelle Nassrasur.",
     "url": "https://[DOMAIN]/",
     "telephone": "[TELEFON]",
-    "image": "https://[DOMAIN]/assets/img/chair.jpg",
+    "image": "https://[DOMAIN]/assets/img/logo.png",
     "priceRange": "€€",
     "address": {
       "@type": "PostalAddress",
@@ -71,11 +70,7 @@
   <header class="header" id="header">
     <div class="wrap header__inner">
       <a class="logo" href="#top" aria-label="Saboss Barber Shop – Startseite">
-        <svg class="logo__mark" viewBox="0 0 400 400" aria-hidden="true">
-          <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" stroke-width="22"/>
-          <g color="currentColor"><use href="#wheel-spoke"/><use href="#wheel-spoke" transform="rotate(90 200 200)"/><use href="#wheel-spoke" transform="rotate(180 200 200)"/><use href="#wheel-spoke" transform="rotate(270 200 200)"/></g>
-          <circle cx="200" cy="200" r="30" fill="currentColor"/>
-        </svg>
+        <img class="logo__img" src="assets/img/logo.png" width="56" height="56" alt="">
         <span class="logo__text"><strong>SABOSS</strong><small>Barber Shop</small></span>
       </a>
 
@@ -125,21 +120,30 @@
         <div class="hero__shade"></div>
       </div>
 
-      <svg class="hero__wheel" id="hero-wheel" viewBox="0 0 400 400" aria-hidden="true">
-        <g color="#C8A97E">
-          <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" stroke-width="16"/>
-          <circle cx="200" cy="200" r="128" fill="none" stroke="currentColor" stroke-width="3" opacity=".6"/>
-          <circle cx="200" cy="200" r="52" fill="none" stroke="currentColor" stroke-width="5"/>
-          <use href="#wheel-spoke"/><use href="#wheel-spoke" transform="rotate(45 200 200)"/>
-          <use href="#wheel-spoke" transform="rotate(90 200 200)"/><use href="#wheel-spoke" transform="rotate(135 200 200)"/>
-          <use href="#wheel-spoke" transform="rotate(180 200 200)"/><use href="#wheel-spoke" transform="rotate(225 200 200)"/>
-          <use href="#wheel-spoke" transform="rotate(270 200 200)"/><use href="#wheel-spoke" transform="rotate(315 200 200)"/>
-          <circle cx="200" cy="200" r="22" fill="currentColor"/>
-        </g>
-      </svg>
+      <div class="hero__wall" aria-hidden="true">
+        <svg class="hero__wheel" id="hero-wheel" viewBox="0 0 400 400">
+          <g color="#C9964A">
+            <circle cx="200" cy="200" r="150" fill="none" stroke="#1a0e06" stroke-width="24"/>
+            <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" stroke-width="16"/>
+            <circle cx="200" cy="200" r="128" fill="none" stroke="currentColor" stroke-width="3" opacity=".6"/>
+            <circle cx="200" cy="200" r="52" fill="none" stroke="currentColor" stroke-width="5"/>
+            <use href="#wheel-spoke"/><use href="#wheel-spoke" transform="rotate(45 200 200)"/>
+            <use href="#wheel-spoke" transform="rotate(90 200 200)"/><use href="#wheel-spoke" transform="rotate(135 200 200)"/>
+            <use href="#wheel-spoke" transform="rotate(180 200 200)"/><use href="#wheel-spoke" transform="rotate(225 200 200)"/>
+            <use href="#wheel-spoke" transform="rotate(270 200 200)"/><use href="#wheel-spoke" transform="rotate(315 200 200)"/>
+            <circle cx="200" cy="200" r="22" fill="currentColor"/>
+          </g>
+        </svg>
+        <div class="lamp lamp--1"><i></i></div>
+        <div class="lamp lamp--2"><i></i></div>
+        <figure class="pic pic--gold hw-a"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/whisky-reklame.svg" width="600" height="800" alt=""></span></span></figure>
+        <figure class="pic hw-b"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/bar-szene.svg" width="800" height="560" alt=""></span></span></figure>
+        <figure class="pic pic--black hw-c"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/segelschiff.svg" width="700" height="520" alt=""></span></span></figure>
+        <figure class="pic hw-d"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/whisky-glas.svg" width="560" height="700" alt=""></span></span></figure>
+      </div>
 
       <div class="wrap hero__content">
-        <p class="eyebrow reveal">Barbershop [STADT]</p>
+        <p class="eyebrow reveal">Barbershop [STADT] · Seit 2022</p>
         <h1 id="hero-title" class="hero__title">
           <span class="line"><span>Präzision.</span></span>
           <span class="line"><span>Stil.</span></span>
@@ -164,11 +168,11 @@
         <div class="split__text">
           <p class="eyebrow reveal">Über uns</p>
           <h2 id="about-title" class="reveal">Handwerk, das man spürt.</h2>
-          <p class="lead reveal">Saboss ist dein Barbershop in [STADT] – seit [JAHR]. Über [ANZAHL] Kunden vertrauen uns ihren Look an.</p>
-          <p class="reveal">Traditionelles Handwerk trifft modernen Stil. Wir nehmen uns Zeit, hören zu und arbeiten sauber bis ins Detail. Du kommst für einen Schnitt. Du gehst mit einem guten Gefühl.</p>
+          <p class="lead reveal">Saboss ist dein Barbershop in [STADT] – seit 2022. Über [ANZAHL] Kunden vertrauen uns ihren Look an.</p>
+          <p class="reveal">Traditionelles Handwerk trifft modernen Stil – zwischen altem Holz, Messing und Schiffsromantik. Wir nehmen uns Zeit, hören zu und arbeiten sauber bis ins Detail. Du kommst für einen Schnitt. Du gehst mit einem guten Gefühl.</p>
         </div>
-        <figure class="frame reveal" data-parallax="0.08">
-          <img class="engraving" src="assets/img/chair.jpg" width="736" height="785" loading="lazy"
+        <figure class="paperframe reveal" data-parallax="0.08">
+          <img class="engraving" src="assets/img/ink-chair.png" width="736" height="785" loading="lazy"
                alt="Gravur-Illustration eines klassischen Barber-Stuhls">
         </figure>
       </div>
@@ -197,8 +201,35 @@
       </div>
     </section>
 
+    <!-- 3b. DIE WAND: Bilder aus alten Bars (Platzhalter-Illustrationen, durch echte Fotos aus dem Laden ersetzen) -->
+    <section class="section section--alt" id="laden" aria-labelledby="wall-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow reveal">Der Laden</p>
+          <h2 id="wall-title" class="reveal">Alte Bars. Altes Holz. Alter Whisky.</h2>
+          <p class="wall-note reveal">An unseren Wänden hängen Bilder aus Bars der 80er und noch älter: Whisky-Reklame, Neonlicht, Schiffe und Schatzkarten. Such dir beim Warten dein Lieblingsbild aus.</p>
+        </header>
+        <!-- Die Bilder liegen in assets/img/wall/. Einfach durch Fotos der echten Bilder im Laden ersetzen (gleicher Dateiname oder src ändern). -->
+        <div class="wall">
+          <button class="pic pic--gold reveal" style="--c:3;--r:-2deg" type="button" data-full="assets/img/wall/whisky-reklame.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/whisky-reklame.svg" width="600" height="800" loading="lazy" alt="Alte Whisky-Reklame mit Flasche und Glas"></span></span></button>
+          <button class="pic pic--wide reveal" style="--c:5;--r:1deg" type="button" data-full="assets/img/wall/bar-szene.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/bar-szene.svg" width="800" height="560" loading="lazy" alt="Bar mit Flaschenregal, Hängelampen und Tresen"></span></span></button>
+          <button class="pic pic--black reveal" style="--c:2;--r:2deg" type="button" data-full="assets/img/wall/whisky-glas.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/whisky-glas.svg" width="560" height="700" loading="lazy" alt="Whisky-Glas mit Eis im Barlicht"></span></span></button>
+          <button class="pic reveal" style="--c:2;--r:-1.5deg" type="button" data-full="assets/img/wall/totenkopf-schild.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/totenkopf-schild.svg" width="600" height="600" loading="lazy" alt="Rundes Piratenschild mit Totenkopf"></span></span></button>
+
+          <button class="pic pic--black reveal" style="--c:2;--r:1.5deg" type="button" data-full="assets/img/wall/schatzkarte.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/schatzkarte.svg" width="600" height="600" loading="lazy" alt="Alte Schatzkarte mit Kompass"></span></span></button>
+          <button class="pic pic--gold pic--wide reveal" style="--c:4;--r:-1deg" type="button" data-full="assets/img/wall/neon-bar.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/neon-bar.svg" width="700" height="500" loading="lazy" alt="Neonschild Whisky Bar an einer Backsteinwand"></span></span></button>
+          <button class="pic reveal" style="--c:3;--r:2deg" type="button" data-full="assets/img/wall/barber-plakat.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/barber-plakat.svg" width="600" height="800" loading="lazy" alt="Altes Barber-Plakat mit Barberpole und Scheren"></span></span></button>
+          <button class="pic pic--black reveal" style="--c:3;--r:-1.8deg" type="button" data-full="assets/img/wall/fass.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/fass.svg" width="600" height="600" loading="lazy" alt="Whisky-Fass auf einem alten Druck"></span></span></button>
+
+          <button class="pic reveal" style="--c:3;--r:1.2deg" type="button" data-full="assets/img/wall/whisky-karte.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/whisky-karte.svg" width="600" height="800" loading="lazy" alt="Whisky-Karte aus den 80ern mit Preisen in DM"></span></span></button>
+          <button class="pic pic--gold pic--wide reveal" style="--c:5;--r:-1deg" type="button" data-full="assets/img/wall/segelschiff.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/wall/segelschiff.svg" width="700" height="520" loading="lazy" alt="Segelschiff bei Mondschein"></span></span></button>
+          <div class="plaque reveal" style="--r:1.5deg"><strong>Ye Olde Barber Shop</strong><span>Est. 2022</span></div>
+        </div>
+      </div>
+    </section>
+
     <!-- 4. LEISTUNGEN -->
-    <section class="section section--alt" id="leistungen" aria-labelledby="services-title">
+    <section class="section" id="leistungen" aria-labelledby="services-title">
       <div class="wrap">
         <header class="section__head">
           <p class="eyebrow reveal">Leistungen</p>
@@ -206,27 +237,27 @@
         </header>
         <div class="tiles">
           <article class="tile reveal">
-            <div class="tile__img"><img class="engraving" src="assets/img/clipper.jpg" width="736" height="1308" loading="lazy" alt="Gravur-Illustration einer Haarschneidemaschine"></div>
+            <div class="tile__img"><img class="engraving" src="assets/img/ink-clipper.png" width="736" height="1308" loading="lazy" alt="Gravur-Illustration einer Haarschneidemaschine"></div>
             <div class="tile__body"><h3>Haarschnitt</h3><p>Classic, Fade oder Skin Fade. Mit Maschine und Schere, auf deine Kopfform abgestimmt.</p></div>
           </article>
           <article class="tile reveal">
-            <div class="tile__img"><img class="engraving" src="assets/img/razor.jpg" width="736" height="491" loading="lazy" alt="Gravur-Illustration eines Rasiermessers"></div>
+            <div class="tile__img"><img class="engraving" src="assets/img/ink-razor.png" width="736" height="491" loading="lazy" alt="Gravur-Illustration eines Rasiermessers"></div>
             <div class="tile__body"><h3>Bartpflege &amp; Bartrasur</h3><p>Form, Kontur und Pflege. Dein Bart sitzt, wie er soll.</p></div>
           </article>
           <article class="tile reveal">
-            <div class="tile__img"><img class="engraving" src="assets/img/razor.jpg" width="736" height="491" loading="lazy" alt="" style="transform:scaleX(-1)"></div>
+            <div class="tile__img"><img class="engraving" src="assets/img/ink-razor.png" width="736" height="491" loading="lazy" alt="" style="transform:scaleX(-1)"></div>
             <div class="tile__body"><h3>Traditionelle Nassrasur</h3><p>Heißes Handtuch, warmer Schaum, Rasiermesser. Der Klassiker zum Runterkommen.</p></div>
           </article>
           <article class="tile reveal">
-            <div class="tile__img"><img class="engraving" src="assets/img/chair.jpg" width="736" height="785" loading="lazy" alt="Gravur-Illustration eines Barber-Stuhls"></div>
+            <div class="tile__img"><img class="engraving" src="assets/img/ink-chair.png" width="736" height="785" loading="lazy" alt="Gravur-Illustration eines Barber-Stuhls"></div>
             <div class="tile__body"><h3>Haarschnitt + Bart</h3><p>Das Komplettpaket. Schnitt, Bart und Finish in einem Termin.</p></div>
           </article>
           <article class="tile reveal">
-            <div class="tile__img"><img class="engraving" src="assets/img/clipper.jpg" width="736" height="1308" loading="lazy" alt="" style="transform:scaleX(-1)"></div>
+            <div class="tile__img"><img class="engraving" src="assets/img/ink-clipper.png" width="736" height="1308" loading="lazy" alt="" style="transform:scaleX(-1)"></div>
             <div class="tile__body"><h3>Kinderhaarschnitt</h3><p>Geduldig, schnell und mit einem Schnitt, der auch nach dem Spielplatz sitzt.</p></div>
           </article>
           <article class="tile reveal">
-            <div class="tile__img"><img class="engraving" src="assets/img/chair.jpg" width="736" height="785" loading="lazy" alt="" style="transform:scaleX(-1)"></div>
+            <div class="tile__img"><img class="engraving" src="assets/img/ink-chair.png" width="736" height="785" loading="lazy" alt="" style="transform:scaleX(-1)"></div>
             <div class="tile__body"><h3>Augenbrauen, Haarwäsche, Styling</h3><p>Die Details, die den Unterschied machen.</p></div>
           </article>
         </div>
@@ -234,7 +265,7 @@
     </section>
 
     <!-- 5. PREISLISTE -->
-    <section class="section" id="preise" aria-labelledby="prices-title">
+    <section class="section section--alt" id="preise" aria-labelledby="prices-title">
       <div class="wrap split split--prices">
         <div class="menu">
           <header class="section__head">
@@ -257,14 +288,14 @@
           </ul>
           <p class="gift reveal"><strong>Das perfekte Geschenk.</strong> Gutscheine im Laden erhältlich.</p>
         </div>
-        <figure class="frame frame--tall reveal" data-parallax="0.06">
-          <img class="engraving" src="assets/img/clipper.jpg" width="736" height="1308" loading="lazy" alt="Gravur-Illustration einer Haarschneidemaschine">
+        <figure class="paperframe paperframe--tall reveal" data-parallax="0.06">
+          <img class="engraving" src="assets/img/ink-clipper.png" width="736" height="1308" loading="lazy" alt="Gravur-Illustration einer Haarschneidemaschine">
         </figure>
       </div>
     </section>
 
     <!-- 6. TEAM -->
-    <section class="section section--alt" id="team" aria-labelledby="team-title">
+    <section class="section" id="team" aria-labelledby="team-title">
       <div class="wrap">
         <header class="section__head">
           <p class="eyebrow reveal">Team</p>
@@ -272,30 +303,36 @@
         </header>
         <!-- Porträtfotos: assets/img/team-1.jpg usw. ablegen und src ersetzen -->
         <div class="team">
-          <article class="member reveal">
+          <article class="member wanted reveal">
+            <p class="wanted__head">WANTED</p>
             <div class="member__photo"><img src="assets/img/placeholder.svg" width="600" height="750" loading="lazy" alt="Porträt von [NAME BARBER 1], Fade-Spezialist"></div>
             <h3>[Name Barber 1]</h3>
             <p class="member__role">Fade-Spezialist</p>
             <p class="member__exp">[X] Jahre Erfahrung</p>
+            <p class="wanted__bounty">Belohnung: ein perfekter Fade</p>
           </article>
-          <article class="member reveal">
+          <article class="member wanted reveal">
+            <p class="wanted__head">WANTED</p>
             <div class="member__photo"><img src="assets/img/placeholder.svg" width="600" height="750" loading="lazy" alt="Porträt von [NAME BARBER 2], Bart-Experte"></div>
             <h3>[Name Barber 2]</h3>
             <p class="member__role">Bart-Experte</p>
             <p class="member__exp">[X] Jahre Erfahrung</p>
+            <p class="wanted__bounty">Belohnung: ein gepflegter Bart</p>
           </article>
-          <article class="member reveal">
+          <article class="member wanted reveal">
+            <p class="wanted__head">WANTED</p>
             <div class="member__photo"><img src="assets/img/placeholder.svg" width="600" height="750" loading="lazy" alt="Porträt von [NAME BARBER 3], Classic-Cut-Barber"></div>
             <h3>[Name Barber 3]</h3>
             <p class="member__role">Classic Cuts &amp; Nassrasur</p>
             <p class="member__exp">[X] Jahre Erfahrung</p>
+            <p class="wanted__bounty">Belohnung: eine glatte Rasur</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- 7. GALERIE -->
-    <section class="section" id="galerie" aria-labelledby="gallery-title">
+    <section class="section section--alt" id="galerie" aria-labelledby="gallery-title">
       <div class="wrap">
         <header class="section__head">
           <p class="eyebrow reveal">Galerie</p>
@@ -303,19 +340,19 @@
         </header>
         <!-- Eigene Fotos: src der Bilder ersetzen (Vorher/Nachher, Nahaufnahmen) -->
         <div class="gallery">
-          <button class="gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><img src="assets/img/placeholder.svg" width="600" height="750" loading="lazy" alt="Fade-Schnitt in der Nahaufnahme [Foto folgt]"></button>
-          <button class="gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><img src="assets/img/placeholder.svg" width="600" height="450" loading="lazy" alt="Rasiermesser an der Kontur [Foto folgt]"></button>
-          <button class="gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><img src="assets/img/placeholder.svg" width="600" height="600" loading="lazy" alt="Vorher-Nachher: Bart [Foto folgt]"></button>
-          <button class="gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><img src="assets/img/placeholder.svg" width="600" height="800" loading="lazy" alt="Heißes Handtuch [Foto folgt]"></button>
-          <button class="gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><img src="assets/img/placeholder.svg" width="600" height="450" loading="lazy" alt="Lederstuhl im Laden [Foto folgt]"></button>
-          <button class="gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><img src="assets/img/placeholder.svg" width="600" height="700" loading="lazy" alt="Vorher-Nachher: Skin Fade [Foto folgt]"></button>
+          <button class="pic pic--black gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/placeholder.svg" width="600" height="750" loading="lazy" alt="Fade-Schnitt in der Nahaufnahme [Foto folgt]"></span></span></button>
+          <button class="pic pic--black gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/placeholder.svg" width="600" height="450" loading="lazy" alt="Rasiermesser an der Kontur [Foto folgt]"></span></span></button>
+          <button class="pic pic--black gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/placeholder.svg" width="600" height="600" loading="lazy" alt="Vorher-Nachher: Bart [Foto folgt]"></span></span></button>
+          <button class="pic pic--black gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/placeholder.svg" width="600" height="800" loading="lazy" alt="Heißes Handtuch [Foto folgt]"></span></span></button>
+          <button class="pic pic--black gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/placeholder.svg" width="600" height="450" loading="lazy" alt="Lederstuhl im Laden [Foto folgt]"></span></span></button>
+          <button class="pic pic--black gallery__item reveal" type="button" data-full="assets/img/placeholder.svg"><span class="pic__frame"><span class="pic__mat"><img src="assets/img/placeholder.svg" width="600" height="700" loading="lazy" alt="Vorher-Nachher: Skin Fade [Foto folgt]"></span></span></button>
         </div>
         <p class="center reveal"><a class="link" href="https://instagram.com/[INSTAGRAM]" target="_blank" rel="noopener">Mehr auf Instagram: @[INSTAGRAM]</a></p>
       </div>
     </section>
 
     <!-- 8. KUNDENSTIMMEN -->
-    <section class="section section--alt" id="stimmen" aria-labelledby="reviews-title">
+    <section class="section" id="stimmen" aria-labelledby="reviews-title">
       <div class="wrap">
         <header class="section__head">
           <p class="eyebrow reveal">Kundenstimmen</p>
@@ -420,7 +457,7 @@
   <footer class="footer">
     <div class="wrap footer__grid">
       <div>
-        <p class="logo logo--static"><strong>SABOSS</strong><small>Barber Shop</small></p>
+        <p class="logo logo--static"><img class="logo__img" src="assets/img/logo.png" width="56" height="56" alt="" loading="lazy"><span><strong>SABOSS</strong><small>Barber Shop</small></span></p>
         <p class="muted">Präzision. Stil. Deine Zeit.</p>
         <p class="social">
           <a href="https://instagram.com/[INSTAGRAM]" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a>

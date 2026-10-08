@@ -23,9 +23,12 @@ Alle Platzhalter stehen in `[ECKIGEN KLAMMERN]`. Suche im Projekt nach `[`:
 ## Medien
 - `assets/video/hero.mp4`: Hero-Hintergrundvideo (Zeitlupe, ohne Ton, < 8 MB). Wird erst nach Einwilligung geladen. Ohne Datei bleibt der animierte Dampf-Hintergrund.
 - `assets/img/placeholder.svg`: in Team und Galerie durch echte Fotos ersetzen.
-- `razor.jpg`, `chair.jpg`, `clipper.jpg`: Gravur-Illustrationen (Referenzbilder). Lizenz/Nutzungsrechte vor Livegang prüfen.
+- `razor.jpg`, `chair.jpg`, `clipper.jpg`: Gravur-Illustrationen (Referenzbilder). Lizenz/Nutzungsrechte vor Livegang prüfen. Die Seite nutzt die Varianten `ink-*.png` (freigestellte Tinte, passt auf Pergament).
+- `assets/img/logo.png`: das Saboss-Logo (Header, Footer, Open Graph).
+- `assets/img/wall/*.svg`: Wandbilder im Stil alter Bar-/Whisky-Drucke (selbst gezeichnete Platzhalter). Besser durch Fotos der echten Bilder im Laden ersetzen: Datei gleichen Namens überschreiben oder `src`/`data-full` in der Sektion „Der Laden“ (`#laden`) ändern.
+- `assets/img/wood-*.svg`, `paper.svg`: Holz- und Pergament-Texturen. Lizenzfrei, generiert.
 
 ## Technik
 - Formular: aktuell nur Frontend-Validierung und Erfolgsmeldung. In `js/main.js` (TODO) an ein Backend oder Buchungssystem (Treatwell, Booksy, Planity) anbinden.
-- DSGVO: Google Maps und Video laden erst nach Einwilligung. Google Fonts werden extern geladen, besser lokal hosten.
+- DSGVO: Google Maps und Video laden erst nach Einwilligung. Schriften (Pirata One, IM Fell English SC, Crimson Pro; alle SIL OFL) liegen lokal in `assets/fonts/`, es werden keine Daten an Google übertragen.
 - `impressum.html` und `datenschutz.html` sind Mustertexte und müssen rechtlich geprüft werden.

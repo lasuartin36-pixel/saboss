@@ -109,7 +109,7 @@
   /* Lightbox */
   const box = $('#lightbox');
   const boxImg = $('img', box);
-  $$('.gallery__item').forEach(item => item.addEventListener('click', () => {
+  $$('[data-full]').forEach(item => item.addEventListener('click', () => {
     const img = $('img', item);
     boxImg.src = item.dataset.full || img.src;
     boxImg.alt = img.alt;

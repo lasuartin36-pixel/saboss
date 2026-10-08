@@ -7,9 +7,9 @@ Start (großes Steuerrad rechts, dreht sich beim Scrollen) → Google-Rezensione
 
 ## Noch einzutragen (Suche nach `[`)
 - `index.html`: Straße, PLZ, Telefon, WhatsApp-Nummer, Öffnungszeiten, Namen der Barber (`[Name Barber 1-3]`).
-- Buchungssystem: URL des Anbieters (Treatwell, Booksy, Planity, Shore …) bei `<div class="booking" data-src="">` eintragen. Wird erst nach Einwilligung geladen.
+- Buchung: alle „Termin buchen“-Buttons führen zur Salonkee-Seite (`https://salonkee.de/salon/saboss-barber?lang=de`, öffnet in neuem Tab). Link bei Bedarf in `index.html` ersetzen (Suche nach `salonkee.de`).
 - Team-Fotos: `assets/img/placeholder.svg` durch Porträts ersetzen.
-- `impressum.html`, `datenschutz.html`: Mustertexte, rechtlich prüfen. Im Datenschutz den Buchungsanbieter eintragen.
+- `impressum.html`, `datenschutz.html`: Mustertexte, rechtlich prüfen. Im Datenschutz die Salonkee-Daten prüfen/ergänzen (Abschnitt 6).
 
 ## Medien
 - `assets/img/wheel.svg`: Steuerrad (Vektor, beliebig scharf).

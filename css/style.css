@@ -68,6 +68,7 @@ p { margin: 0 0 1rem; color: var(--muted); }
 .btn--gold:hover { background: linear-gradient(#fadc94, #e0a94c 52%, #b8832f); box-shadow: 0 5px 0 #4a2c0e, 0 12px 20px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .5); }
 .btn--ghost:hover { background: rgba(217, 160, 74, .16); }
 .btn--sm { padding: .6rem 1.2rem; font-size: .92rem; }
+.btn--lg { padding: 1.15rem 2.6rem; font-size: 1.25rem; }
 
 /* Header */
 .header { position: fixed; inset: 0 0 auto; z-index: 100; height: var(--header-h); transition: background .4s, box-shadow .4s; }

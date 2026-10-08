@@ -13,7 +13,7 @@
   <meta property="og:image" content="assets/img/logo.png">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/pirata-one.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=202610080743">
+  <link rel="stylesheet" href="css/style.css?v=202610080756">
 </head>
 <body>
   <a class="skip" href="#main">Zum Inhalt springen</a>
@@ -32,7 +32,7 @@
         <a href="#termin">Termin</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
-      <a class="btn btn--gold btn--sm header__book" href="#termin">Termin buchen</a>
+      <a class="btn btn--gold btn--sm header__book" href="https://salonkee.de/salon/saboss-barber?lang=de" target="_blank" rel="noopener">Termin buchen</a>
       <button class="burger" id="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="overlay"><span></span><span></span></button>
     </div>
   </header>
@@ -60,7 +60,7 @@
           </h1>
           <p class="hero__sub">Haarschnitt, Fade, Bart und Rasur – mit Zeit, Handwerk und einem Blick für Details.</p>
           <div class="hero__actions">
-            <a class="btn btn--gold" href="#termin">Termin buchen</a>
+            <a class="btn btn--gold" href="https://salonkee.de/salon/saboss-barber?lang=de" target="_blank" rel="noopener">Termin buchen</a>
             <a class="btn btn--ghost" href="#rezensionen">Das sagen Kunden</a>
           </div>
         </div>
@@ -197,12 +197,12 @@
             <h2 id="book-title">Bereit für deinen neuen Look?</h2>
           </header>
 
-          <!-- Buchungssystem: URL in data-src eintragen (Treatwell, Booksy, Planity, Shore …). Wird erst nach Klick bzw. Einwilligung geladen. -->
-          <div class="booking" id="booking" data-src="">
+          <!-- Buchung läuft über Salonkee; der Link öffnet den Kalender in einem neuen Tab -->
+          <div class="booking" id="booking">
             <div class="booking__gate">
               <h3>Online-Termin buchen</h3>
-              <p class="booking__hint">Die Buchung läuft über einen externen Anbieter. Beim Laden werden Daten an diesen übertragen.</p>
-              <button class="btn btn--gold" type="button" id="load-booking">Buchungssystem laden</button>
+              <p class="booking__hint">Such dir Barber, Leistung und deinen freien Termin im Kalender aus. Die Buchung öffnet sich in einem neuen Tab bei unserem Buchungspartner Salonkee.</p>
+              <a class="btn btn--gold btn--lg" href="https://salonkee.de/salon/saboss-barber?lang=de" target="_blank" rel="noopener">Jetzt Termin buchen</a>
             </div>
           </div>
 
@@ -242,7 +242,7 @@
     </div>
   </footer>
 
-  <a class="sticky-book" href="#termin">Termin buchen</a>
+  <a class="sticky-book" href="https://salonkee.de/salon/saboss-barber?lang=de" target="_blank" rel="noopener">Termin buchen</a>
 
   <!-- Schere: wandert beim Scrollen von rechts nach links, schneidet auf/zu und hinterlässt eine Schnittlinie -->
   <div class="snip" aria-hidden="true">
@@ -271,13 +271,13 @@
   <!-- Einwilligung (DSGVO): Karte und Buchungssystem laden erst nach Klick -->
   <div class="consent" id="consent" role="dialog" aria-labelledby="consent-title" aria-modal="false" hidden>
     <h2 id="consent-title">Deine Privatsphäre</h2>
-    <p>Google Maps und das Buchungssystem laden wir nur mit deiner Einwilligung. Alles andere läuft ohne Tracking. Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <p>Google Maps laden wir nur mit deiner Einwilligung. Alles andere läuft ohne Tracking. Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
     <div class="consent__actions">
       <button type="button" class="btn btn--gold btn--sm" data-consent-choice="all">Alle akzeptieren</button>
       <button type="button" class="btn btn--ghost btn--sm" data-consent-choice="necessary">Nur notwendige</button>
     </div>
   </div>
 
-  <script src="js/main.js?v=202610080743" defer></script>
+  <script src="js/main.js?v=202610080756" defer></script>
 </body>
 </html>

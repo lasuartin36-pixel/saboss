@@ -13,7 +13,7 @@
   <meta property="og:image" content="assets/img/logo.png">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/pirata-one.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=202610080730">
+  <link rel="stylesheet" href="css/style.css?v=202610080736">
 </head>
 <body>
   <a class="skip" href="#main">Zum Inhalt springen</a>
@@ -65,7 +65,10 @@
           </div>
         </div>
       </div>
-      <img class="hero__wheel" id="wheel" src="assets/img/wheel.svg" width="1000" height="1000" alt="" fetchpriority="high">
+      <div class="hero__wheelbox" aria-hidden="true">
+        <img class="hero__wheel" id="wheel" src="assets/img/wheel.svg" width="1000" height="1000" alt="" fetchpriority="high">
+        <img class="hero__logo" src="assets/img/logo.png" width="447" height="447" alt="">
+      </div>
       <a class="scroll-hint" href="#rezensionen" aria-label="Nach unten scrollen"><span>Scroll</span><i></i></a>
     </section>
 
@@ -275,6 +278,6 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=202610080730" defer></script>
+  <script src="js/main.js?v=202610080736" defer></script>
 </body>
 </html>

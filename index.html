@@ -13,7 +13,7 @@
   <meta property="og:image" content="assets/img/logo.png">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/pirata-one.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=202610080701">
+  <link rel="stylesheet" href="css/style.css?v=202610080711">
 </head>
 <body>
   <a class="skip" href="#main">Zum Inhalt springen</a>
@@ -240,6 +240,30 @@
 
   <a class="sticky-book" href="#termin">Termin buchen</a>
 
+  <!-- Schere: wandert beim Scrollen von rechts nach links, schneidet auf/zu und hinterlässt eine Schnittlinie -->
+  <div class="snip" aria-hidden="true">
+    <i class="snip__line"></i>
+    <svg class="snip__scissors" id="scissors" viewBox="-112 -50 212 100">
+      <defs>
+        <linearGradient id="snipMetal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f1ea"/><stop offset=".45" stop-color="#bfc3c8"/><stop offset="1" stop-color="#6d7277"/></linearGradient>
+        <linearGradient id="snipBrass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbe6a0"/><stop offset=".5" stop-color="#c9964a"/><stop offset="1" stop-color="#6b4a1c"/></linearGradient>
+        <g id="snipHalf">
+          <path d="M0 0 L50 19" stroke="#2a170a" stroke-width="12" stroke-linecap="round"/>
+          <path d="M0 0 L50 19" stroke="url(#snipBrass)" stroke-width="8" stroke-linecap="round"/>
+          <ellipse cx="68" cy="26" rx="19" ry="13" transform="rotate(22 68 26)" fill="none" stroke="#2a170a" stroke-width="10"/>
+          <ellipse cx="68" cy="26" rx="19" ry="13" transform="rotate(22 68 26)" fill="none" stroke="url(#snipBrass)" stroke-width="6"/>
+          <path d="M12 -11 L-100 -1.5 L-100 1 L12 4 Z" fill="url(#snipMetal)" stroke="#2a2d30" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M8 -8 L-92 -1" stroke="#fff" stroke-width="1.6" opacity=".7" stroke-linecap="round"/>
+        </g>
+      </defs>
+      <g id="bladeB"><use href="#snipHalf" transform="scale(1 -1)"/></g>
+      <g id="bladeA"><use href="#snipHalf"/></g>
+      <circle r="9" fill="url(#snipBrass)" stroke="#2a170a" stroke-width="2.5"/>
+      <path d="M-5 -2 L5 2" stroke="#2a170a" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+
   <!-- Einwilligung (DSGVO): Karte und Buchungssystem laden erst nach Klick -->
   <div class="consent" id="consent" role="dialog" aria-labelledby="consent-title" aria-modal="false" hidden>
     <h2 id="consent-title">Deine Privatsphäre</h2>
@@ -250,6 +274,6 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=202610080701" defer></script>
+  <script src="js/main.js?v=202610080711" defer></script>
 </body>
 </html>

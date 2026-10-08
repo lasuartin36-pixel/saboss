@@ -53,6 +53,44 @@
     kick();
   }
 
+  /* Schere: wandert beim Scrollen von rechts nach links und schneidet (auf/zu) */
+  const scissors = $('#scissors');
+  const cutline = $('.snip__line');
+  if (scissors && cutline && !reduced) {
+    const bladeA = $('#bladeA'), bladeB = $('#bladeB');
+    let angle = 8, idle;
+    const update = () => {
+      const vw = innerWidth;
+      const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+      const p = Math.min(1, Math.max(0, scrollY / max));
+      const w = scissors.getBoundingClientRect().width;
+      const x = vw - p * (vw + w * 1.1);              // linke Kante der Schere
+      scissors.style.transform = `translate3d(${x.toFixed(1)}px,0,0)`;
+      const pivot = x + w * (112 / 212);              // Drehpunkt der Schere
+      cutline.style.transform = `scaleX(${Math.min(1, Math.max(0, (vw - pivot) / vw)).toFixed(4)})`;
+      // Klingen: alle ~200px Scrollweg einmal auf und zu
+      const target = 1 + 17 * (0.5 + 0.5 * Math.sin(scrollY / 32));
+      angle += (target - angle) * 0.5;
+      bladeA.setAttribute('transform', `rotate(${angle.toFixed(2)})`);
+      bladeB.setAttribute('transform', `rotate(${(-angle).toFixed(2)})`);
+      clearTimeout(idle);
+      idle = setTimeout(() => {            // im Stand sanft halb schließen
+        const settle = () => {
+          angle += (7 - angle) * 0.2;
+          bladeA.setAttribute('transform', `rotate(${angle.toFixed(2)})`);
+          bladeB.setAttribute('transform', `rotate(${(-angle).toFixed(2)})`);
+          if (Math.abs(angle - 7) > .1) requestAnimationFrame(settle);
+        };
+        settle();
+      }, 180);
+    };
+    let raf = 0;
+    const kick = () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; update(); }); };
+    addEventListener('scroll', kick, { passive: true });
+    addEventListener('resize', kick);
+    update();
+  }
+
   /* Bewertungs-Slider */
   const track = $('#track');
   if (track) {

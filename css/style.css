@@ -222,6 +222,12 @@ address { font-style: normal; color: var(--text); margin-bottom: .6rem; font-siz
 .footer__links a { color: var(--muted); } .footer a:hover { color: var(--amber-hi); }
 .footer__copy { font-size: 1rem; }
 
+/* Schere beim Scrollen */
+.snip { position: fixed; left: 0; right: 0; bottom: 64px; height: 0; z-index: 85; pointer-events: none; }
+.snip__line { position: absolute; left: 0; right: 0; top: 0; border-top: 3px dashed rgba(243, 232, 203, .6); transform: scaleX(0); transform-origin: 100% 50%; filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .7)); }
+.snip__scissors { position: absolute; left: 0; top: -53px; width: 200px; height: auto; aspect-ratio: 212 / 100; transform: translate3d(110vw, 0, 0); filter: drop-shadow(0 6px 5px rgba(0, 0, 0, .6)); will-change: transform; }
+@media (max-width: 900px) { .snip { bottom: 112px; } .snip__scissors { width: 140px; top: -37px; } }
+
 /* Einwilligung */
 .consent { position: fixed; left: 16px; bottom: 16px; z-index: 150; width: min(460px, 100% - 32px); padding: 1.5rem; color: var(--ink); background: var(--paper-tex) #e6d6b0; border: 3px solid #0c0603; box-shadow: 0 20px 60px rgba(0, 0, 0, .7), inset 0 0 40px rgba(110, 70, 20, .4); }
 .consent h2 { font-size: 1.9rem; margin-bottom: .5rem; color: var(--ink); text-shadow: none; }
@@ -268,6 +274,7 @@ address { font-style: normal; color: var(--text); margin-bottom: .6rem; font-siz
   .booking iframe { height: 680px; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .snip { display: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .js .reveal { opacity: 1; transform: none; }

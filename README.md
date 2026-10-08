@@ -13,5 +13,5 @@ Start (großes Steuerrad rechts, dreht sich beim Scrollen) → Google-Rezensione
 
 ## Medien
 - `assets/img/wheel.svg`: Steuerrad (Vektor, beliebig scharf).
-- `assets/img/wall/*.svg`: selbst gezeichnete Wandbilder. Besser durch Fotos der echten Bilder im Laden ersetzen (Datei gleichen Namens überschreiben oder `src` in `.pics` ändern).
+- `assets/img/wall/*.jpg`: die Wandbilder (an der Holzwand angenagelt). Austauschen: Datei überschreiben oder `src` im Block `.pics` in `index.html` ändern. Rechte an den Bildern selbst klären, bevor die Seite online geht.
 - Schriften liegen lokal in `assets/fonts/` (Pirata One, IM Fell English SC, Crimson Pro, Playfair Display, Bebas Neue; alle SIL OFL).

@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400"><defs>
-<filter id="f" x="0" y="0" width="400" height="400" filterUnits="userSpaceOnUse"><feTurbulence type="fractalNoise" baseFrequency=".035 .05" numOctaves="4" seed="3" stitchTiles="stitch"/>
-<feColorMatrix values=".14 0 0 0 .84  .12 0 0 0 .72  .09 0 0 0 .5  0 0 0 0 1"/></filter>
-<filter id="g" x="0" y="0" width="400" height="400" filterUnits="userSpaceOnUse"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="8" stitchTiles="stitch"/>
-<feColorMatrix values="0 0 0 0 .25  0 0 0 0 .14  0 0 0 0 .05  1.6 0 0 0 -.62"/></filter></defs>
-<rect width="400" height="400" filter="url(#f)"/><rect width="400" height="400" filter="url(#g)" opacity=".5"/></svg>
